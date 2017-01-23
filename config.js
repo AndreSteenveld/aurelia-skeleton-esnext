@@ -2,11 +2,43 @@ System.config({
   defaultJSExtensions: true,
   transpiler: false,
   paths: {
-    "*": "dist/*",
     "github:*": "jspm_packages/github/*",
-    "npm:*": "jspm_packages/npm/*"
+    "npm:*": "jspm_packages/npm/*",
+    "dstore/*": "dojo/dstore/*",
+    "dojo/*": "dojo/dojo/*",
+    "dijit/*": "dojo/dijit/*",
+    "dgrid/*": "dojo/dgrid/*",
+    "*": "dist/*"
+  },
+  meta: {
+    "dojo/*": {
+      "loader": "lib/external-amd-loader"
+    },
+    "dijit/*": {
+      "loader": "lib/external-amd-loader"
+    },
+    "dgrid/*": {
+      "loader": "lib/external-amd-loader"
+    },
+    "dstore/*": {
+      "loader": "lib/external-amd-loader"
+    }
+  },
+  packages: {
+    "lib/external-amd-loader": {
+      "main": "index",
+      "defaultExtension": "js"
+    },
+    "dojo": {},
+    "dijit": {},
+    "dgrid": {},
+    "dstore": {}
   },
   map: {
+    "dojo": "../dojo/dojo",
+    "dijit": "../dojo/dijit",
+    "dgrid": "../dojo/dgrid",
+    "dstore": "../dojo/dstore",
     "aurelia-animator-css": "npm:aurelia-animator-css@1.0.1",
     "aurelia-bootstrapper": "npm:aurelia-bootstrapper@1.0.0",
     "aurelia-fetch-client": "npm:aurelia-fetch-client@1.0.1",
