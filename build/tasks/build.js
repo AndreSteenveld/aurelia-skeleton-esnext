@@ -42,15 +42,19 @@ gulp.task('build-css', function() {
   
   gulp.src("styles/**/*.scss")
     .pipe(changed(paths.sass, {extension: '.scss'}))
+    .pipe(sourcemaps.init())
     .pipe(sass({ importer : sass_importer.importer }).on( "error", sass.logError ) )
     .pipe(autoprefixer({ browsers: [ "last 2 versions" ] }))
+    .pipe(sourcemaps.write())
     .pipe(gulp.dest("styles/"))
     .pipe(browserSync.stream());
   
   gulp.src(paths.sass)
     .pipe(changed(paths.sass, {extension: '.scss'}))
+    .pipe(sourcemaps.init())
     .pipe(sass({ importer : sass_importer.importer }).on( "error", sass.logError ) )
     .pipe(autoprefixer({ browsers: [ "last 2 versions" ] }))
+    .pipe(sourcemaps.write())
     .pipe(gulp.dest(paths.output))
     .pipe(browserSync.stream());
     
