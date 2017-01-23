@@ -65,6 +65,7 @@ gulp.task('export', function(callback) {
     'clean-export',
     'export-normalized-resources',
     'export-copy',
+    'dojo-build',
     callback
   );
 });

@@ -33,7 +33,7 @@ var
 // With this structure we can do a build and output that to the dist directory from which the rest of the build system will pick it
 // up, bundle and export it.
 // 
-gulp.task( "dojo:link", function( ){
+gulp.task( "dojo-link", function( ){
     
     fs.ensureDirSync( dojo_build_direcory );
     
@@ -45,7 +45,10 @@ gulp.task( "dojo:link", function( ){
     
 });
 
-gulp.task( "dojo:build", function( ){
+gulp.task( "dojo-build", function( ){
+    
+    gulp.src( "dojo/dojo.config.js" )
+        .pipe( gulp.dest( "export/dojo" ) );
     
     return run( "npm run dojo-build" ).exec( );    
     

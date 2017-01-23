@@ -10,3 +10,5 @@ test/e2e/dist
 /export
 styles/**/*.css
 dojo/
+!dojo/dojo.config.js
+!dojo/dojo.profile.js

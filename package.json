@@ -21,7 +21,7 @@
   "scripts": {
     "test": "gulp test",
     "e2e": "gulp serve webdriver-standalone e2e",
-    "dojo-build": "./dojo/util/buildscripts/build.sh --profile ./dojo.profile.js --release"
+    "dojo-build": "./dojo/util/buildscripts/build.sh --profile ./dojo/dojo.profile.js --dojoConfig ./dojo/dojo.config.js --release"
   },
   "devDependencies": {
     "aurelia-bundler": "^0.4.0",
