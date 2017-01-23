@@ -11,7 +11,8 @@ var notify = require('gulp-notify');
 var browserSync = require('browser-sync');
 var htmlmin = require('gulp-htmlmin');
 var sass = require("gulp-sass");
-var sass_importer = require("sass-jspm-importer")
+var sass_importer = require("sass-jspm-importer");
+var autoprefixer = require("gulp-autoprefixer");
 
 // transpiles changed es6 files to SystemJS format
 // the plumber() call prevents 'pipe breaking' caused
@@ -38,9 +39,18 @@ gulp.task('build-html', function() {
 
 // copies changed css files to the output directory
 gulp.task('build-css', function() {
-  return gulp.src([paths.sass, paths.style])
+  
+  gulp.src("styles/**/*.scss")
     .pipe(changed(paths.sass, {extension: '.scss'}))
     .pipe(sass({ importer : sass_importer.importer }).on( "error", sass.logError ) )
+    .pipe(autoprefixer({ browsers: [ "last 2 versions" ] }))
+    .pipe(gulp.dest("styles/"))
+    .pipe(browserSync.stream());
+  
+  gulp.src(paths.sass)
+    .pipe(changed(paths.sass, {extension: '.scss'}))
+    .pipe(sass({ importer : sass_importer.importer }).on( "error", sass.logError ) )
+    .pipe(autoprefixer({ browsers: [ "last 2 versions" ] }))
     .pipe(gulp.dest(paths.output))
     .pipe(browserSync.stream());
     

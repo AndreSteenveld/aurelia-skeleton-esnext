@@ -3,12 +3,12 @@ var outputRoot = 'dist/';
 var exportSrvRoot = 'export/';
 
 module.exports = {
-  sass: appRoot + '**/*.scss',
   root: appRoot,
   source: appRoot + '**/*.js',
   html: appRoot + '**/*.html',
+  sass: appRoot + '**/*.scss',
   css: appRoot + '**/*.css',
-  style: 'styles/**/*.scss',
+  style: 'styles/**/*.css',
   output: outputRoot,
   exportSrv: exportSrvRoot,
   doc: './doc',
