@@ -6,9 +6,15 @@ module.exports = {
         "**/*.html!text",
         "**/*.css!text"
       ],
+      "excludes": [
+        "dojo/**/*",
+        "dijit/**/*",
+        "dstore/**/*",
+        "dgrid/**/*",
+      ],
       "options": {
         "inject": true,
-        "minify": true,
+        "minify": false,
         "depCache": true,
         "rev": false
       }

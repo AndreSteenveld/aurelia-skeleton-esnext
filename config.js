@@ -35,10 +35,10 @@ System.config({
     "dstore": {}
   },
   map: {
-    "dojo": "../dojo/dojo",
-    "dijit": "../dojo/dijit",
-    "dgrid": "../dojo/dgrid",
-    "dstore": "../dojo/dstore",
+    "dojo": "dojo/dojo",
+    "dijit": "dojo/dijit",
+    "dgrid": "dojo/dgrid",
+    "dstore": "dojo/dstore",
     "aurelia-animator-css": "npm:aurelia-animator-css@1.0.1",
     "aurelia-bootstrapper": "npm:aurelia-bootstrapper@1.0.0",
     "aurelia-fetch-client": "npm:aurelia-fetch-client@1.0.1",

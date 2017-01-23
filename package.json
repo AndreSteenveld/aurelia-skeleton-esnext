@@ -21,7 +21,7 @@
   "scripts": {
     "test": "gulp test",
     "e2e": "gulp serve webdriver-standalone e2e",
-    "dojo-build": "./dojo/util/buildscripts/build.sh --profile ./dojo/dojo.profile.js --dojoConfig ./dojo/dojo.config.js --release"
+    "dojo-build": "./dojo/util/buildscripts/build.sh --dojoConfig ./dojo/dojo.config.js --profile ./dojo/dojo.profile.js --release"
   },
   "devDependencies": {
     "aurelia-bundler": "^0.4.0",
@@ -33,7 +33,6 @@
     "babel-plugin-syntax-flow": "^6.18.0",
     "babel-plugin-transform-decorators-legacy": "^1.3.4",
     "babel-plugin-transform-flow-strip-types": "^6.18.0",
-    "babel-plugin-transform-promise-to-bluebird": "^1.1.1",
     "babel-preset-es2015": "^6.18.0",
     "babel-preset-stage-1": "^6.16.0",
     "bluebird": "^3.4.7",

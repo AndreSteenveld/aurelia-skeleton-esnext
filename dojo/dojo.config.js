@@ -1,8 +1,9 @@
 var dojoConfig = {
     
     async: true,
-    
-    
+        
+    baseUrl: "dojo/",
+        
     hasCache:{
         "host-browser":1,
         "dom":1,
@@ -24,8 +25,6 @@ var dojoConfig = {
         "dojo-requirejs-api": 1
     },
     
-    
-
     trace:{
         // these are listed so it's simple to turn them on/off while debugging loading
         "loader-inject":0,
@@ -39,10 +38,10 @@ var dojoConfig = {
     },
 
     packages:[
-        { "name" : "dojo",   location: "." },
-        { "name" : "dijit",  location: "../dijit" },
-        { "name" : "dgrid",  location: "../dgrid" },
-        { "name" : "dstore", location: "../dstore" }
+        { "name" : "dojo",   location: "./dojo" },
+        { "name" : "dijit",  location: "./dijit" },
+        { "name" : "dgrid",  location: "./dgrid" },
+        { "name" : "dstore", location: "./dstore" }
     ]
 
 };

@@ -36,13 +36,17 @@ dependencies = {
 		{
 			name: "../dgrid/OnDemandGrid.js",
 			dependencies: [ "dgrid.OnDemandGrid" ]
+		},
+		{
+			name: "../dstore/Memory.js",
+			dependencies: [ "dstore.Memory" ]
 		}
 	],
 
 	prefixes: [
-		[ "dijit", "./dijit" ],
-		[ "dgrid", "./dgrid" ],
-		[ "dstore", "./dstore" ]		
+		[ "dijit", "../dijit" ],
+		[ "dgrid", "../dgrid" ],
+		[ "dstore", "../dstore" ]		
 	],
 
 	// these are all the has feature that affect the loader and/or the bootstrap
