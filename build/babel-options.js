@@ -17,7 +17,7 @@ module.exports = function(modules) {
       'syntax-flow',
       'transform-decorators-legacy',
       'transform-flow-strip-types',
-      'transform-promise-to-bluebird'
+      //'transform-promise-to-bluebird'
     ]
   };
 };
