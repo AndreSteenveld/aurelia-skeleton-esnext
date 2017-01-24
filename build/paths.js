@@ -9,6 +9,7 @@ module.exports = {
   sass: appRoot + '**/*.scss',
   css: appRoot + '**/*.css',
   style: 'styles/**/*.css',
+  style_src: 'styles/**/*.scss',
   output: outputRoot,
   exportSrv: exportSrvRoot,
   doc: './doc',
