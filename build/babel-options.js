@@ -16,7 +16,8 @@ module.exports = function(modules) {
     plugins: [
       'syntax-flow',
       'transform-decorators-legacy',
-      'transform-flow-strip-types'
+      'transform-flow-strip-types',
+      'transform-promise-to-bluebird'
     ]
   };
 };
