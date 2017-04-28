@@ -1,0 +1,16 @@
+<template>
+    
+    <select value.bind="selected" multiple>
+        
+        <option 
+            repeat.for="collection of collections"
+            value.bind="collection.href"
+        >
+            
+            ${ collection.name }
+            
+        </option>
+        
+    </select>    
+    
+</template>
